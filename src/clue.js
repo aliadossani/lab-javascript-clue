@@ -123,9 +123,12 @@ const weaponsArray = [{
 
 
 // ITERATION 2
-
+const combinationArray = [...suspectsArray, ...roomsArray, ...weaponsArray];
 function selectRandom(arr) {
-
+    if (!arr.length) {
+        return undefined;
+    }
+    return arr[Math.floor(Math.random() * arr.length)]
 }
 
 function pickMystery() { }
